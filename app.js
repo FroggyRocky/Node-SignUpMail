@@ -34,12 +34,12 @@ merge_fields: {
 }]
 }
 
-const mailURL = "https://us6.api.mailchimp.com/3.0/lists/aa689492c0"
+const mailURL = "" //address
 const jsonData = JSON.stringify(data);
 
 const options = {
     method: "POST",
-    auth:"f:73a4434ffa6938aa5f32be9a28eb380c-us6"
+    auth:"" //API KEY
 }
 const requestMail = https.request(mailURL, options, function(response){
 if (response.statusCode !== 200) {res.sendFile(__dirname + "/failure.html") }
@@ -59,5 +59,3 @@ app.listen(3000, function(){
 
 
 
-// api key 73a4434ffa6938aa5f32be9a28eb380c-us6
-// audience id aa689492c0
